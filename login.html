@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="api.js"></script>
+    <script src="function.js"></script>
+</head>
+
+<body id="login">
+    <nav class="navbar navbar-dark bg-dark r-flex justify-content-between">
+        <ul class="nav-prop navbar-nav d-flex flex-row justify-content-between ">
+            <li class="li-margin">
+                Home
+            </li>
+            <li class="li-margin">
+                TodoList
+            </li>
+            <li class="li-margin">
+                <a href="signup.html">Sign Up</a>
+            </li>
+        </ul>
+
+    </nav>
+
+    <div id="sign-in" class="box-sign-in position-absolute top-50 start-50 translate-middle">
+        <br>
+        <p class="logp">Welcome to <br>Sign in </p>
+        <input type="email" id="enter-mail" class="enter-btn" placeholder="Your email ...">
+        <input type="password" id="enter-pass" class="enter-btn" placeholder="Password ...">
+        <button id="signIn" class="sign-btn">Sign in</button>
+        <br> <br>
+        <p class="p">Not have a account?<a href="signup.html">Create your account</a></p>
+    </div>
+    <div hidden id='alert-signIn' class='alert alert-primary center-text' role='alert'> Sign in Succseful
+    </div>
+    <div hidden id='alert-warning' class='position-absolute bottom-0 start-50 translate-middle-x alert alert-warning text-center' role='alert'> Failed ! check your email or your password
+    </div>
+</body>
+<script>
+    $(document).ready(function() {
+        signIn();
+    })
+</script>
+
+</html>
